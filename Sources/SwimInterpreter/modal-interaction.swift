@@ -1,9 +1,10 @@
+import Surface
 public enum InteractionAction:
     Sendable,
     Codable,
     Hashable
 {
-    case literal(Input)
+    case literal(SurfaceInput.Key)
     case motion(Motion)
     case command(Command)
     case enterInsert(InsertionPlacement)
@@ -60,7 +61,7 @@ public struct ModalInteraction:
     }
 
     public mutating func handle(
-        _ key: Input
+        _ key: SurfaceInput.Key
     ) -> InteractionResult {
         if mode != .insert,
            mode != .replace
@@ -120,7 +121,7 @@ public struct ModalInteraction:
     }
 
     private func isCommandGrammarKey(
-        _ key: Input
+        _ key: SurfaceInput.Key
     ) -> Bool {
         switch key {
         case .left,
@@ -159,7 +160,7 @@ public struct ModalInteraction:
     }
 
     private mutating func handleNormal(
-        _ key: Input
+        _ key: SurfaceInput.Key
     ) -> InteractionResult {
         switch key {
         case .char("h"),
@@ -335,7 +336,7 @@ public struct ModalInteraction:
     }
 
     private mutating func handleInsert(
-        _ key: Input
+        _ key: SurfaceInput.Key
     ) -> InteractionResult {
         switch key {
         case .escape:
@@ -431,7 +432,7 @@ public struct ModalInteraction:
     }
 
     private mutating func handleVisual(
-        _ key: Input
+        _ key: SurfaceInput.Key
     ) -> InteractionResult {
         switch key {
         case .escape:

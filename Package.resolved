@@ -1,5 +1,5 @@
 {
-  "originHash" : "630f7331c7e615eb28a25a9c05a5114589360e628a817db8935f9b11bdb8498e",
+  "originHash" : "73b9e0779c8bbf1ba64a12f4f68473d5a9eacf9f8eedb3f7df5698671ba06071",
   "pins" : [
     {
       "identity" : "atomos",
@@ -7,16 +7,34 @@
       "location" : "https://github.com/swift-lco/Atomos.git",
       "state" : {
         "branch" : "master",
-        "revision" : "5ffdb160c4913e02214020eb75ac620900cf2914"
+        "revision" : "857fa1b7d1975fe17d52e21c154f92ba5e696be3"
       }
     },
     {
-      "identity" : "testing",
+      "identity" : "primitives",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/swift-tooling/Testing.git",
+      "location" : "https://github.com/swift-lco/Primitives.git",
       "state" : {
         "branch" : "master",
-        "revision" : "105eecb68c3db99119dff3afeb846b7923abbc85"
+        "revision" : "05431e58c105831a155d4a3759309ff1e1e30a88"
+      }
+    },
+    {
+      "identity" : "schema",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swift-lco/Schema.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "cc3b5e9411676439a849926be1a9c08e26d41597"
+      }
+    },
+    {
+      "identity" : "surface",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swift-lco/Surface.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "f898d410a3ce79d384f71aec7049ff00ffe2ebbd"
       }
     }
   ],

@@ -18,10 +18,20 @@ let package = Package(
         // ),
     ],
     dependencies: [
+        .package(
+            url: "https://github.com/swift-lco/Surface.git",
+            branch: "master"
+        ),
     ],
     targets: [
         .target(
-            name: "SwimInterpreter"
+            name: "SwimInterpreter",
+            dependencies: [
+                .product(
+                    name: "Surface",
+                    package: "Surface"
+                ),
+            ]
         ),
         // .executableTarget(
         //     name: "SwimInterpreterTestFlows",

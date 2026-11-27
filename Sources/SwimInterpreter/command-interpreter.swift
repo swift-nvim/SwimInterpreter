@@ -1,4 +1,5 @@
 import Dispatch
+import Surface
 
 public struct CommandTiming:
     Sendable,
@@ -56,7 +57,7 @@ public struct CommandInterpreter:
     }
 
     public mutating func handle(
-        _ key: Input
+        _ key: SurfaceInput.Key
     ) -> CommandInterpretation {
         handle(
             key,
@@ -68,7 +69,7 @@ public struct CommandInterpreter:
     }
 
     public mutating func handle(
-        _ key: Input,
+        _ key: SurfaceInput.Key,
         atNanoseconds now: UInt64
     ) -> CommandInterpretation {
         expirePendingSequence(
@@ -409,7 +410,7 @@ public struct CommandInterpreter:
     }
 
     private mutating func finishReplacement(
-        _ key: Input,
+        _ key: SurfaceInput.Key,
         count: Int
     ) -> CommandInterpretation {
         guard let replacement = replacementText(
@@ -435,7 +436,7 @@ public struct CommandInterpreter:
     }
 
     private func replacementText(
-        for key: Input
+        for key: SurfaceInput.Key
     ) -> String? {
         switch key {
         case .char(let character):

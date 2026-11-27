@@ -8,27 +8,15 @@ let package = Package(
         .macOS(.v13)
     ],
     products: [
-        .executable(
-            name: "t_swiminterpreter",
-            targets: ["SwimInterpreterTests"]
-        ),
         // .executable(
         //     name: "swiminttest",
         //     targets: ["SwimInterpreterTestFlows"]
         // ),
     ],
     dependencies: [
-        .package(url: "https://github.com/swift-tooling/Testing.git", branch: "master"),
         .package(path: ".."),
     ],
     targets: [
-        .executableTarget(
-            name: "SwimInterpreterTests",
-            dependencies: [
-                .product(name: "SwimInterpreter", package: "SwimInterpreter"),
-                .product(name: "Testing", package: "Testing"),
-            ]
-        ),
         // .executableTarget(
         //     name: "SwimInterpreterTestFlows",
         //     dependencies: [

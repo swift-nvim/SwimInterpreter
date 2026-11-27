@@ -9,15 +9,3 @@ public enum ExCommand:
     case quit = "q"
     case explore = "Ex"
 }
-
-public enum ExCommandLineResult:
-    Sendable,
-    Codable,
-    Hashable
-{
-    case editing
-    case command(ExCommand)
-    case cancelled
-    case invalid(String)
-    case inactive
-}
